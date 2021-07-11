@@ -1,0 +1,29 @@
+import java.util.*;
+import java.io.*;
+class Unit
+{
+	  public static void main(String args[])
+	  {
+		    float a=1.20f;
+		    float b=0.0f;
+		    Scanner sc=new Scanner(System.in);
+		    System.out.println("ENTER NUMBER OF UNITS");
+		    int u=sc.nextInt();
+		    if(u<=100)
+		    {
+		    	  b=u*a;
+		    }
+		    else if(u>100 && u<=300)
+		    {
+		    	b+=100*a;
+		    	b+=(u-100)*2;	
+		    }
+		    else
+		    {
+		    	b+=100*a;
+		    	b+=200*2;
+		    	b+=(u-300)*3;
+		    }
+		    System.out.println("result is -> "+b);   
+	  }
+}
