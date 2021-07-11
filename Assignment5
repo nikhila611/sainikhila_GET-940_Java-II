@@ -1,0 +1,61 @@
+import java.io.*;
+import java.util.*;
+class banks
+{
+	
+	private int accno;
+	private int accbal;
+	private int accpassword;
+	static String BankName;
+	
+	public static String getBankName() {
+		return BankName;
+	}
+	public static void setBankName(String bankName) {
+		BankName = bankName;
+	}
+	public int getAccountno() {
+		return accno;
+	}
+	public void setAccountno(int accno) {
+		this.accno = accno;
+	}
+	public int getAccBalance() {
+		return accbal;
+	}
+	public void setAccBalance(int accbal) {
+		this.accbal = accbal;
+	}
+	public int getAccPassword() {
+		return accpassword;
+	}
+	public void setAccPassword(int accpassword) {
+		this.accpassword = accpassword;
+	}
+	public void display()
+	{
+		System.out.println("BankName   ->"+BankName);
+ 		System.out.println("ACCOUNT NO ->"+accno);
+ 		System.out.println("ACCOUNT BALANCE  ->"+accbal);
+ 		System.out.println("ACCOUNT PASSWORD  ->"+accpassword);
+ 		
+	}
+	}
+public class Bank
+{
+     	public static void main(String args[])
+     	{
+     		banks.setBankName("SBI");
+     		Scanner sc=new Scanner(System.in);
+     		int accno=sc.nextInt();
+     		int balance=sc.nextInt();
+     		int password=sc.nextInt();
+     		banks b=new banks();
+     		b.setAccountno(accno);
+     		b.setAccBalance(balance);
+     		b.setAccPassword(password);
+     		b.display();
+     		sc.close();
+     		
+     	}
+}
